@@ -1,11 +1,17 @@
 import React from 'react';
-import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink, } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import SearchBooks from './pages/SearchBooks';
 import SavedBooks from './pages/SavedBooks';
 import Navbar from './components/Navbar';
 import "bootstrap/dist/css/bootstrap.min.css";
+
+import {
+  ApolloProvider,
+  ApolloClient,
+  InMemoryCache,
+  createHttpLink,
+} from "@apollo/client";
 
 
 const httpLink = createHttpLink({

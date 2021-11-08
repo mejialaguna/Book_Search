@@ -5,8 +5,6 @@ import { LOGIN_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
 import { Form, Button, Alert } from "react-bootstrap";
 
-// import { loginUser } from '../utils/API';
-// import Auth from '../utils/auth';
 
 const LoginForm = () => {
   const [userFormData, setUserFormData] = useState({ email: "", password: "" });
@@ -34,7 +32,8 @@ const LoginForm = () => {
     try {
       const { data } = await login({
         variables: { ...userFormData },
-      });
+      })
+
       // if (!data.ok) {
       //   throw new Error("something went wrong!");
       // }
@@ -62,7 +61,7 @@ const LoginForm = () => {
           show={showAlert}
           variant="danger"
         >
-          Something went wrong with your login credentials!
+          sorry ... wrong username/password
         </Alert>
         <Form.Group>
           <Form.Label htmlFor="email">Email</Form.Label>
