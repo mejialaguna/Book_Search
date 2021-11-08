@@ -1,4 +1,4 @@
-const { User } = require("../models");
+const User  = require("../models");
 const { AuthenticationError } = require("apollo-server-express");
 const { signToken } = require("../utils/auth");
 
@@ -16,7 +16,7 @@ const resolvers = {
     },
   },
 
-  Mutations: {
+  Mutation: {
     addUser: async (parent, args) => {
       const user = await User.create(args);
       const token = signToken(user);
@@ -24,15 +24,28 @@ const resolvers = {
     },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
+
       if (!user) {
-        throw new AuthenticationError("wrong username");
+        throw new AuthenticationError("Incorrect credentials");
       }
-      const correctPw = await User.isCorrectPassword(password);
+
+      const correctPw = await user.isCorrectPassword(password);
+
       if (!correctPw) {
-        throw new AuthenticationError("wrong password");
+        throw new AuthenticationError("Incorrect credentials");
       }
+
       const token = signToken(user);
-      return { user, token };
+      return { token, user };
+    },
+    savedBook: async (parent, args, context) => {
+      if (context.user) {
+        const savedBooks = await User.findByIdAndUpdate(
+          { _id: context.user._id },
+          { $push: { savedBooks: args.input } },
+          { new: true }
+        );
+      }
     },
     removeBook: async (parent, { bookId }, context) => {
       if (context.user) {
@@ -45,4 +58,4 @@ const resolvers = {
     },
   },
 };
-
+module.exports = resolvers;
