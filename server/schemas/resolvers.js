@@ -1,4 +1,4 @@
-const User  = require("../models");
+const User = require("../models");
 const { AuthenticationError } = require("apollo-server-express");
 const { signToken } = require("../utils/auth");
 
@@ -45,6 +45,7 @@ const resolvers = {
           { $push: { savedBooks: args.input } },
           { new: true }
         );
+        return savedBooks;
       }
     },
     removeBook: async (parent, { bookId }, context) => {
@@ -54,6 +55,7 @@ const resolvers = {
           { $pull: { savedBooks: { bookId: bookId } } },
           { new: true, runValidators: true }
         ).populate("savedBooks");
+        return deleteBook;
       }
     },
   },
