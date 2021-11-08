@@ -33,11 +33,11 @@ const LoginForm = () => {
 
     try {
       const { data } = await login({
-        variables: { ...formState },
+        variables: { ...userFormData },
       });
-      if (!data.ok) {
-        throw new Error("something went wrong!");
-      }
+      // if (!data.ok) {
+      //   throw new Error("something went wrong!");
+      // }
 
       Auth.login(data.login.token);
       console.log(data);
@@ -52,7 +52,7 @@ const LoginForm = () => {
     });
   };
   
-  
+
   return (
     <>
       <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
@@ -75,7 +75,7 @@ const LoginForm = () => {
             required
           />
           <Form.Control.Feedback type="invalid">
-            Email is required!
+            {error && <div>Email is required!</div>}
           </Form.Control.Feedback>
         </Form.Group>
 
@@ -90,7 +90,7 @@ const LoginForm = () => {
             required
           />
           <Form.Control.Feedback type="invalid">
-            Password is required!
+            {error && <div>Password is required!</div>}
           </Form.Control.Feedback>
         </Form.Group>
         <Button
