@@ -39,10 +39,11 @@ const resolvers = {
       return { token, user };
     },
     saveBook: async (parent, args, context) => {
+      console.log(args)
       if (context.user) {
         const savedBooks = await User.findByIdAndUpdate(
-          { _id: context.user._id },
-          { $push: { savedBooks: args.input } },
+          context.user._id, //just using the context id no like line 53
+          { $push: { savedBooks: args.savedBook } }, //not the type , but the data
           { new: true }
         );
         return savedBooks;
