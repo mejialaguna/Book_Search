@@ -48,7 +48,7 @@ const SearchBooks = () => {
 
       const { items } = await response.json();
 
-      const bookData = items.map((book) => ({
+      const Data = items.map((book) => ({
         bookId: book.id,
         authors: book.volumeInfo.authors || ["No author to display"],
         title: book.volumeInfo.title,
@@ -56,7 +56,7 @@ const SearchBooks = () => {
         image: book.volumeInfo.imageLinks?.thumbnail || "",
       }));
 
-      setSearchedBooks(bookData);
+      setSearchedBooks(Data);
       setSearchInput("");
     } catch (err) {
       console.error(err);
@@ -67,7 +67,7 @@ const SearchBooks = () => {
   const handleSaveBook = async (bookId) => {
     // find the book in `searchedBooks` state by the matching id
     const bookToSave = searchedBooks.find((book) => book.bookId === bookId);
-    
+
     // get token
     const token = Auth.loggedIn() ? Auth.getToken() : null;
 
@@ -78,7 +78,7 @@ const SearchBooks = () => {
 
     try {
       await saveBook({
-        variables: { bookData: {...bookToSave} },
+        variables: { bookData: { ...bookToSave } },
       });
 
       setSavedBookIds([...savedBookIds, bookToSave.bookId]);
