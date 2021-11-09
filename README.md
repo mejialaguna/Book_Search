@@ -39,7 +39,7 @@
 
 
   
-   [![with hearth by GITHUB_USERNAME](https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%99%A5%20by-GITHUB_mejialaguna-ff1414.svg?style=flat&logo=)](https://github.com/mejialaguna/.git)[![License:](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0) 
+   [![with hearth by GITHUB_USERNAME](https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%99%A5%20by-GITHUB_mejialaguna-ff1414.svg?style=flat&logo=)](https://github.com/mejialaguna)[![License:](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0) [![Heroku App Status](https://img.shields.io/badge/%E2%86%91_Deploy_to-Heroku-7056bf.svg?style=flat)](https://book-g-search.herokuapp.com/)
     
   </div>
   
@@ -78,15 +78,19 @@
 
   <br/> 
   
-  <img src="src/img/img_readme/img_1.png"/> 
+  <img src="img/img_1.png"/> 
   <br/>
   <br/>
-  <img src="src/img/img_readme/img_2.png"/>
+  <img src="img/img_2.png"/>
   <br/>
   <br/>
-  <img src="src/img/img_readme/img_3.png">
+  <img src="img/img_3.png">
    <br/>
   <br/>
+  <img src="img/img_4.png">
+  <br>
+  <br>
+  <img src="img/img_5.png">
 
   <br>
   <br>
@@ -125,7 +129,7 @@ please to watch the A walkthrough video demonstrating the functionality of the a
 | ------------- | ------------- | ------------- |
 |               |               |              |
 | <a href="https://www.w3schools.com/html/"><img src="https://img.shields.io/badge/HTML5-ff1709?style=flate&logo=HTML5&logoColor=ff1709&color=ff1709&labelColor=gray" /></a>   |  <a href="https://expressjs.com/"><img src="https://img.shields.io/badge/express-ff1709?style=flate&logo=express&logoColor=black&color=005571&labelColor=gray" /></a>  | <a href="https://www.mongodb.com/"><img src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=flate&logo=visual-studio&logoColor=blue&color=blue&labelColor=gray" /></a> |
-| <a href="https://www.w3schools.com/html/"><img src="https://img.shields.io/badge/CSS3-ff1709?style=flate&logo=CSS3&logoColor=white&color=0048BA&labelColor=gray" /></a>  | <a href="https://nodejs.org/en/"><img src="https://img.shields.io/badge/node.js-0b1e20?style=flate&logo=node.js&logoColor=587f51&color=587f51&labelColor=gray" /></a> | <a href="https://www.mongodb.com/"><img src="https://img.shields.io/badge/git-%23F05033.svg?style=flate&logo=git&logoColor=orange&color=red&labelColor=gray" /></a> |
+| <a href="https://www.w3schools.com/css/"><img src="https://img.shields.io/badge/CSS3-ff1709?style=flate&logo=CSS3&logoColor=white&color=0048BA&labelColor=gray" /></a>  | <a href="https://nodejs.org/en/"><img src="https://img.shields.io/badge/node.js-0b1e20?style=flate&logo=node.js&logoColor=587f51&color=587f51&labelColor=gray" /></a> | <a href="https://www.mongodb.com/"><img src="https://img.shields.io/badge/git-%23F05033.svg?style=flate&logo=git&logoColor=orange&color=red&labelColor=gray" /></a> |
 | <a href="https://www.javascript.com"><img src="https://img.shields.io/badge/JavaScript-ff1709?style=flate&logo=JavaScript&logoColor=yellow&color=yellow&labelColor=gray" /></a>   | <a href="https://www.w3schools.com/js/js_es6.asp"><img src="https://img.shields.io/badge/ES6-ff1709?style=flate&logo=ES6&logoColor=E10098&color=lime&labelColor=gray" /></a>   | <a href="https://github.com/mejialaguna/Book_Search.git"><img src="https://img.shields.io/badge/github-%23121011.svg?style=flate&logo=github&logoColor=white&color=ff1709&labelColor=gray" /></a>  |
 | <a href="https://getbootstrap.com/"><img src="https://img.shields.io/badge/Bootstrap-ff1709?style=flate&logo=Bootstrap&logoColor=white&color=9955bb&labelColor=gray" /></a>  | <a href="https://www.npmjs.com/"><img src="https://img.shields.io/badge/npm-ff1709?style=flate&logo=npm&logoColor=E10098&color=black&labelColor=gray" /></a> | <a href="https://www.mongodb.com/"><img src="https://img.shields.io/badge/heroku-%23430098.svg?style=flate&logo=heroku&logoColor=6762A6&color=6762A6&labelColor=white" /></a>  |
 | <a href="https://mui.com/"><img src="https://img.shields.io/badge/MUI-%230081CB.svg?style=flate&logo=material-ui&logoColor=blue&color=white&labelColor=gray" /></a>  | <a href="https://www.mongodb.com/"><img src="https://img.shields.io/badge/react-ff1709?style=flate&logo=react&logoColor=blue&color=blue&labelColor=gray" /></a>   |
@@ -197,28 +201,32 @@ please to watch the A walkthrough video demonstrating the functionality of the a
  <br/>
 
 # Acceptance Criteria
-GIVEN a single-page application portfolio for a web developer
-WHEN I load the portfolio <br/>
-THEN I am presented with a page containing a header, a section for content, and a footer<br/>
-WHEN I view the header<br/>
-THEN I am presented with the developer's name and navigation with titles corresponding to different sections of the portfolio<br/>
-WHEN I view the navigation titles<br/>
-THEN I am presented with the titles About Me, Portfolio, Contact, and Resume, and the title corresponding to the current section is highlighted<br/>
-WHEN I click on a navigation title<br/>
-THEN I am presented with the corresponding section below the navigation without the page reloading and that title is highlighted<br/>
-WHEN I load the portfolio the first time<br/>
-THEN the About Me title and section are selected by default<br/>
-WHEN I am presented with the About Me section<br/>
-THEN I see a recent photo or avatar of the developer and a short bio about them<br/>
-WHEN I am presented with the Portfolio section<br/>
-THEN I see titled images of six of the developer’s applications with links to both the deployed applications and the corresponding GitHub repository<br/>
-WHEN I am presented with the Contact section<br/>
-THEN I see a contact form with fields for a name, an email address, and a message<br/>
-WHEN I move my cursor out of one of the form fields without entering text<br/>
-THEN I receive a notification that this field is required<br/>
-WHEN I enter text into the email address field<br/>
-THEN I receive a notification if I have entered an invalid email address<br/>
-WHEN I am presented with the Resume section<br/>
-THEN I see a link to a downloadable resume and a list of the developer’s proficiencies<br/>
-WHEN I view the footer<br/>
-THEN I am presented with text or icon links to the developer’s GitHub and LinkedIn profiles, and their profile on a third platform (Stack Overflow, Twitter)
+GIVEN a book search engine <br/>
+WHEN I load the search engine<br/>
+THEN I am presented with a menu with the options Search for Books and Login/Signup and an input field to search for books and a submit button.<br/>
+WHEN I click on the Search for Books menu option<br/>
+THEN I am presented with an input field to search for books and a submit button.<br/>
+WHEN I am not logged in and enter a search term in the input field and click the submit button.<br/>
+THEN I am presented with several search results, each featuring a book’s title, author, description, image, and a link to that book on the Google Books site.<br/>
+WHEN I click on the Login/Signup menu option<br/>
+THEN a modal appears on the screen with a toggle between the option to log in or sign up<br/>
+WHEN the toggle is set to Signup<br/>
+THEN I am presented with three inputs for a username, an email address, and a password, and a signup button<br/>
+WHEN the toggle is set to Login<br/>
+THEN I am presented with two inputs for an email address and a password and login button<br/>
+WHEN I enter a valid email address and create a password and click on the signup button<br/>
+THEN my user account is created and I am logged in to the site<br/>
+WHEN I enter my account’s email address and password and click on the login button<br/>
+THEN I the modal closes and I am logged in to the site<br/>
+WHEN I am logged in to the site<br/>
+THEN the menu options change to Search for Books, an option to see my saved books, and Logout<br/>
+WHEN I am logged in and enter a search term in the input field and click the submit button<br/>
+THEN I am presented with several search results, each featuring a book’s title, author, description, image, and a link to that book on the Google Books site and a button to save a book to my account<br/>
+WHEN I click on the Save button on a book<br/>
+THEN that book’s information is saved to my account<br/>
+WHEN I click on the option to see my saved books<br/>
+THEN I am presented with all of the books I have saved to my <br/> account, each featuring the book’s title, author, description, image, and a link to that book on the Google Books site and a button to remove a book from my account<br/>
+WHEN I click on the Remove button on a book<br/>
+THEN that book is deleted from my saved books list<br/>
+WHEN I click on the Logout button<br/>
+THEN I am logged out of the site and presented with a menu with the options Search for Books and Login/Signup and an input field to search for books and a submit button .
