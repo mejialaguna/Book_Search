@@ -75,7 +75,9 @@ const SavedBooks = () => {
                 <Card.Body>
                   <Card.Title>{book.title}</Card.Title>
                   <p className="small">Authors: {book.authors}</p>
-                  <Card.Text>{book.description}</Card.Text>
+                  <Card.Text>
+                    {book.description} <a href={book.link}>link</a>
+                  </Card.Text>
                   {error && <div>cant delete book</div>}
                   <Button
                     className="btn-block btn-danger"
